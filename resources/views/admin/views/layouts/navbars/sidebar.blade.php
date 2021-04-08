@@ -101,6 +101,11 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{{ route('adm.confview') }}">
+                        <i class="ni ni-planet text-blue"></i> {{ __('Site configs') }}
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="{{ route('adm.videos') }}">
                         <i class="ni ni-planet text-blue"></i> {{ __('Videos') }}
                     </a>
@@ -111,14 +116,19 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('table') }}">
+                    <a class="nav-link" href="{{ route('adm.posts') }}">
                         <i class="ni ni-bullet-list-67 text-default"></i>
                         <span class="nav-link-text">{{__('Posts')}}</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{{route('user.index')}}">
                         <i class="ni ni-circle-08 text-pink"></i> {{ __('Users') }}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('user.index')}}">
+                        <i class="ni ni-circle-08 text-pink"></i> {{ __('Friends') }}
                     </a>
                 </li>
             </ul>

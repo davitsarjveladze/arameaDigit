@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="content container">
+    <div class="content container" style="width: auto; background-color:white">
         <div class="row">
             <!-- content-main -->
             <div class="col-md-8 content-main">
@@ -25,7 +25,7 @@
                         <h1 class="crayon article-titre-49 article-h1">{{$post->title}}</h1>
                         <div class="article-slot"></div>
                     </div>
-                    <div class="crayon article-texte-49 article-texte">
+                    <div class="">
                         {!!$post->body  !!}
                     </div>
                 </div>
@@ -48,12 +48,10 @@
         <h4>Comments</h4>
         @guest
             <div class="banner-nav-home">
-                 For adding  comments  <a href="{{ route('login') }}"> <i class="fa fa-sign-in" aria-hidden="true"></i> <b> sing-in</b> </a> or
+                For adding  comments  <a href="{{ route('login') }}"> <i class="fa fa-sign-in" aria-hidden="true"></i> <b> sing-in</b> </a> or
                 <a href="{{ route('register') }}"> <i class="fa fa-id-card-o" aria-hidden="true"></i><b> Register</b></a>
-
             </div>
         @else
-
             @include('posts.commentsDisplay', ['comments' => $post->comments, 'post_id' => $post->id])
 
             <hr />

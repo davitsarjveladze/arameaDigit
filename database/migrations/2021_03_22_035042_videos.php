@@ -13,17 +13,17 @@ class Videos extends Migration
      */
     public function up()
     {
-        //
-        Schema::create('videos3', function (Blueprint $table) {
-            $table->id();
-            $table->text('tittle');
-            $table->text('category');
-            $table->text('gallery_name');
-            $table->text('img_url');
-            $table->text('video_url');
-            $table->integer('status');
-            $table->timestamps();
-        });
+//        //
+//        Schema::create('videos3', function (Blueprint $table) {
+//            $table->id();
+//            $table->text('tittle');
+//            $table->text('category');
+//            $table->text('gallery_name');
+//            $table->text('img_url');
+//            $table->text('video_url');
+//            $table->integer('status');
+//            $table->timestamps();
+//        });
     }
 
     /**
@@ -34,5 +34,6 @@ class Videos extends Migration
     public function down()
     {
         //
+        Schema::dropIfExists('videos3');
     }
 }

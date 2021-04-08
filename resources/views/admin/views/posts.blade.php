@@ -103,10 +103,9 @@
                                 <label for="category" class="label">{{ __('Category') }}</label>
 
                                 <select  id="category" name="category" type="email" class="form-control @error('month') is-invalid @enderror" required autocomplete="email">
-                                    <option selected>Category</option>
-                                    <option value="1">Culture</option>
-                                    <option value="2">life</option>
-                                    <option value="3">Solidarity</option>
+                                    <option value="culture">Culture</option>
+                                    <option value="life">life</option>
+                                    <option value="solidarity">Solidarity</option>
                                 </select>
                                 @error('month')
                                 <span class="invalid-feedback" role="alert">
@@ -123,7 +122,7 @@
                                 <label class="label">Post Body: </label>
 
                                 <textarea class="body" name="body"></textarea>
-                                <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+                                <script src="https://cdn.tiny.cloud/1/mg3s1y1vgbo93nd6stmcrda9ngjwicbn4stpfqqy7cj914p2/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
                                 <script>
                                     tinymce.init({
                                         selector:'textarea.body',

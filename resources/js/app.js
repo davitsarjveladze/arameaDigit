@@ -4,12 +4,9 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-import './bootstrap'
-import Vuelidate from 'vuelidate'
+require('./bootstrap');
 
-window.Vue = require('vue')
-
-window.Vue.use(Vuelidate)
+window.Vue = require('vue').default;
 
 /**
  * The following block of code may be used to automatically register your
@@ -19,20 +16,15 @@ window.Vue.use(Vuelidate)
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-Vue.component('siteheader', require('./main/components/SiteHeader.vue').default);
+// const files = require.context('./', true, /\.vue$/i)
+// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-const files = require.context('./main/components', true, /\.vue$/i)
-console.log(files)
-files.keys().map(key => window.Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-
+// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
+
  */
-/* eslint-disable no-unused-vars */
-const app = new window.Vue({
-  el: '#app'
-})
-/* eslint-enable no-unused-vars */
+

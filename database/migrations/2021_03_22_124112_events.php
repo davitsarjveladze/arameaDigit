@@ -13,16 +13,16 @@ class Events extends Migration
      */
     public function up()
     {
-        Schema::create('event', function (Blueprint $table) {
-            $table->id();
-            $table->text('tittle');
-            $table->text('description');
-            $table->text('date');
-            $table->text('time');
-            $table->text('address');
-            $table->integer('status');
-            $table->timestamps();
-        });
+//        Schema::create('event', function (Blueprint $table) {
+//            $table->id();
+//            $table->text('tittle');
+//            $table->text('description');
+//            $table->text('date');
+//            $table->text('time');
+//            $table->text('address');
+//            $table->integer('status');
+//            $table->timestamps();
+//        });
     }
 
     /**
@@ -33,5 +33,7 @@ class Events extends Migration
     public function down()
     {
         //
+        Schema::dropIfExists('event');
+
     }
 }

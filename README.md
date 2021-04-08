@@ -1,69 +1,79 @@
-![CI](https://github.com/khjohnson1972/laravel-vue-bootstrap-starter/workflows/CI/badge.svg)
+<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
-## Laravel 8, Vue.js 2, Bootstrap 4, MySQL 8 Starter
+<p align="center">
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+</p>
 
-This is a starter template setup for those looking to get started on a new project. To use this template click, "Use this template" near the top of this page.
+## About Laravel
 
-## Features
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-* Laravel Auth
-* EsLint
-* Vue-test-utils and Jest
-* Vue and Vuelidate
-* Sample Vue `<contact></contact>` Component with Tests and Code Coverage
-* Laravel-mix for webpack of assets
-* Phpcs and PSR2 Standard
-* Phpunit with Code Coverage
-* Git hook for pre-commit
-* Github Actions for Testing Code on Push to Master Branch and Pull-Requests
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-## Installation
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-* git clone the repository you created after clicking on, "Use this template" above.
-* `composer install -o`
-* `npm install` in development or `npm ci` in production
-* `npm run dev`
-* setup your .env file with database credentials
-* `php artisan key:generate`
-* `php artisan migrate`
-* `php artisan db:seed`
-* `php artisan serve` (visit the app at http://127.0.0.1:8000)
+## Learning Laravel
 
-## Setup
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-* Update `![CI](https://github.com/khjohnson1972/laravel-vue-bootstrap-starter/workflows/CI/badge.svg)` at top of README to reflect your local repository for the CI status badge.
-* `npm install` for development or `npm ci` for production.
-* `composer update` or `composer install -o` for development. `composer install -o --no-dev` for production.
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Commands
+## Laravel Sponsors
 
-### PHP/Composer Scripts
-* `composer cs` (php code sniffer using PSR2)
-* `composer cs-fix` (php code beautifier using PSR2)
-* `composer test` (to run the PhpUnit tests)
-* `composer lint` (run php linter on all php files)
-* `composer clear-all` (clear caches for config, cache, route and views)
-* `composer deploy` (composer install, Laravel artisan migrate and Laravel cache config, routes and views)
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### NPM
-* `npm run dev` (Laravel mix to build assets)
-* `npm run watch` (Laravel mix to watch build assets. Use `npm run watch-poll` instead.)
-* `npm run watch-poll` (Laravel mix to watch-poll build assets)
-* `npm run production` (Laravel to run production build)
-* `npm run test:unit` (Run the unit tests and view the coverage in ./build/jest/coverage/)
-* `npm run test:unit-update-snapshots` (Run the unit tests and update the snapshots)
-* `npm run test:ci` (Run the unit tests in continuous integration mode)
-* `npm run test:unit-watch` (Run the unit tests and watch for changes)
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Cubet Techno Labs](https://cubettech.com)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[Many](https://www.many.co.uk)**
+- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
+- **[DevSquad](https://devsquad.com)**
+- [UserInsights](https://userinsights.com)
+- [Fragrantica](https://www.fragrantica.com)
+- [SOFTonSOFA](https://softonsofa.com/)
+- [User10](https://user10.com)
+- [Soumettre.fr](https://soumettre.fr/)
+- [CodeBrisk](https://codebrisk.com)
+- [1Forge](https://1forge.com)
+- [TECPRESSO](https://tecpresso.co.jp/)
+- [Runtime Converter](http://runtimeconverter.com/)
+- [WebL'Agence](https://weblagence.com/)
+- [Invoice Ninja](https://www.invoiceninja.com)
+- [iMi digital](https://www.imi-digital.de/)
+- [Earthlink](https://www.earthlink.ro/)
+- [Steadfast Collective](https://steadfastcollective.com/)
+- [We Are The Robots Inc.](https://watr.mx/)
+- [Understand.io](https://www.understand.io/)
+- [Abdel Elrafa](https://abdelelrafa.com)
+- [Hyper Host](https://hyper.host)
+- [Appoly](https://www.appoly.co.uk)
+- [OP.GG](https://op.gg)
+- [云软科技](http://www.yunruan.ltd/)
 
-#### Run a single jest test
-* `npx cross-env NODE_ENV=test vue-cli-service test:unit --verbose=true resources/js/main/components/Form/Contact.unit.js`
+## Contributing
 
-### Github Hook
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-There is a pre-commit hook in ./.github/hooks/. This is moved to the ./git/hooks/ directory when `composer install` or `composer dump-autoload` is run.
+## Code of Conduct
 
-### TESTING
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-* `composer test` to run the PhpUnit tests. Code coverage is output to build/coverage.
-* `npm run test:unit` to run the Vue\Jest tests. Code coverage is output to build/jest/coverage.
+## Security Vulnerabilities
 
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+
+## License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

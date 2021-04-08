@@ -11,7 +11,7 @@
                     <!-- card event 42 -->
                     @foreach($posts as $post)
                     <div  class="col-sm-6 mb-5">
-                        <div class="card-event ">
+                        <div class="card-event h-100">
                             <div class="card-event-top">
                                 <div class=" card-event-img">
                                     <img src="{{asset($post->img_url)}}" class="customers-img no_logo" width="677" height="677" alt="">

@@ -30,5 +30,7 @@ class GalleryPhoto extends Migration
     public function down()
     {
         //
+        Schema::dropIfExists('gallery_photos');
+
     }
 }

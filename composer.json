@@ -9,7 +9,7 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Kevin Johnson",
+            "name": "Webapp",
             "email": "khjohnson1972@gmail.com"
         }
     ],
@@ -20,7 +20,9 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
-        "laravel/ui": "^3.0"
+        "laravel/ui": "^3.2",
+        "predis/predis": "^1.1",
+        "srmklive/paypal": "^3.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.2",
@@ -47,6 +49,9 @@
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         },
+        "files": [
+            "app/helpers.php"
+        ],
         "classmap": []
     },
     "autoload-dev": {
@@ -60,7 +65,7 @@
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi",
-            "@php -r \"if(is_dir('.git/hooks/')) : shell_exec('rsync -aq --chmod=+x .github/hooks/ .git/hooks/'); endif;\""
+            "@php -r \"if(is_dir('.git/hooks/')) : shell_exec('rsync -aq --chmod=+x .git/hooks/ .git/hooks/'); endif;\""
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""

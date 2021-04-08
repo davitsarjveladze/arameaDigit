@@ -17,6 +17,7 @@ class CreatePostsCommentsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->text('body');
+            $table->text('category');
             $table->boolean('confirmed');
             $table->string('img_url');
             $table->integer('user_id');
