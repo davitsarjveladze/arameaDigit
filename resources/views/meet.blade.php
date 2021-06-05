@@ -14,11 +14,11 @@
                     <div class="card-event h-100">
                         <div class="card-event-top">
                             <div class=" card-event-img">
-                                <img src="https://via.placeholder.com/350x430" class="customers-img no_logo" width="677" height="677" alt="">
+                                <img src="https://w0.pngwave.com/png/438/887/linus-torvalds-linux-kernel-gnu-linux-history-of-linux-computer-software-others-png-clip-art-thumbnail.png" class="customers-img no_logo" width="677" height="677" alt="">
                             </div>
                             <div class="card-event-keyword">
-                                <a href="Publications.html" class="card-event-keyword-link">
-                                    <img src="https://via.placeholder.com/350x430" class="rounded-circle" alt="" width="40" height="40">
+                                <a href="/meetartists/id" class="card-event-keyword-link">
+                                    <img src="https://w0.pngwave.com/png/438/887/linus-torvalds-linux-kernel-gnu-linux-history-of-linux-computer-software-others-png-clip-art-thumbnail.png" class="rounded-circle" alt="" width="40" height="40">
                                     <span>Meet artists</span>
                                 </a>
                             </div>

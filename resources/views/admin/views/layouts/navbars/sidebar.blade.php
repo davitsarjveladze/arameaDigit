@@ -106,13 +106,18 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="/adm/advertise ">
+                        <i class="ni ni-planet text-blue"></i> {{ __('Advertise') }}
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="{{ route('adm.videos') }}">
                         <i class="ni ni-planet text-blue"></i> {{ __('Videos') }}
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="{{ route('map') }}">
-                        <i class="ni ni-pin-3 text-orange"></i> {{ __('Audio') }}
+                    <a class="nav-link" href="/adm/sounds_albums">
+                        <i class="ni ni-pin-3 text-orange"></i> {{ __('Sounds') }}
                     </a>
                 </li>
                 <li class="nav-item">

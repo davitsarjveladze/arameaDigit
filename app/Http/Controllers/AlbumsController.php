@@ -27,7 +27,6 @@ class AlbumsController extends Controller
     public function StoreGallery(Request $request)
     {
         $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         $imageName = time().'.'.$request->image->extension();
@@ -48,18 +47,11 @@ class AlbumsController extends Controller
         DB::table('gallery')->insert($InsertData);
         return redirect()->route('adm.gallery');
 
-        return back()
-            ->with('success', 'You have successfully upload image.')
-            ->with('image', $imageName);
     }
     function getGallery()
     {
-        $Gallery = DB::table('gallery')
-            ->leftJoin('gallery_photos', 'gallery.id', '=', 'gallery_photos.gallery_id')
-            ->groupBy('gallery_photos.id','gallery.id','gallery.tittle','gallery.img_url','gallery.status'
-            ,'gallery.created_at','gallery.updated_at','gallery.category'
-            )
-            ->select('gallery.*',DB::raw('count(gallery_photos.id) as count'))->paginate(3);
+        $Gallery = DB::table('gallery')->select('*')->paginate(3);
+//        dd($Gallery);
         return view('admin.views.gallery', compact('Gallery'));
     }
     function GetGalleryDetail($id)
@@ -69,6 +61,12 @@ class AlbumsController extends Controller
             ->orderBy('id', 'desc')->paginate(10);
         return view('admin.views.galleryDetail', compact('photos'));
     }
+    function deleteGallery($id)
+    {
+        DB::table('gallery')->where('id', '=', $id)->delete();
+        return redirect()->back();
+    }
+
     function GetUserGallery()
     {
         $Gallery = DB::table('gallery')->select("*")
@@ -76,6 +74,7 @@ class AlbumsController extends Controller
             ->orderBy('id', 'desc')->paginate(3);
         return view('gallery', compact('Gallery'));
     }
+
     function GetUserGalleryPhoto($id)
     {
         $photos = DB::table('gallery_photos')->select("*")
@@ -83,10 +82,10 @@ class AlbumsController extends Controller
             ->orderBy('id', 'desc')->paginate(10);
         return view('galleryShow',compact('photos'));
     }
+
     function StorePhotoInGallery(Request $request)
     {
         $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         $imageName = time().'.'.$request->image->extension();
@@ -106,6 +105,7 @@ class AlbumsController extends Controller
         DB::table('gallery_photos')->insert($InsertData);
         return redirect()->back();
     }
+
     function DeletePhoto(Request $request)
     {
         DB::table('gallery_photos')->where('id', '=', $request->input('id'))->delete();

@@ -10,4 +10,7 @@ class AdvertiseController extends Controller
     public function GetAdvertiseUserPage() {
         return view('advertise');
     }
+    public function getAdminAddIndex(){
+        return view('admin.views.advertise');
+    }
 }

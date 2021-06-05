@@ -15,14 +15,16 @@ class FirstPageController2 extends Controller
         return view('admin.views.dashboard');
     }
 
-    function getProfile()
+    function getProfile($id = null)
     {
-        return view('admin.views.profile.edit');
+        $user = DB::table('users')->where('id','=',$id)->get();
+        return view('admin.views.profile.edit',compact('user'));
     }
 
     function getUsersTable()
     {
-        return view('admin.views.users');
+        $users = DB::table('users')->paginate(10);
+        return view('admin.views.users',compact('users'));
     }
 
     function getLogin()
