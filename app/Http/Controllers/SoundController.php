@@ -15,4 +15,8 @@ class SoundController extends Controller
     {
         return view('soundDetail');
     }
+    public function getAdminIndex(){
+        $sounds = [];
+        return view('admin.views.sound',compact('sounds'));
+    }
 }

@@ -144,7 +144,6 @@
                                             </div>
                                             <ul class="dropdown_content_custom nav">
                                                 <li ><a href="/posts"><b>Add posts</b></a></li>
-                                                <li ><a href="/"><b>Add photo</b></a></li>
                                                 <li><a  href="{{ route('logout') }}"
                                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -201,7 +200,6 @@
                             </div>
                             <ul class="dropdown_content_custom nav">
                                 <li ><a href="/posts">Add posts</a></li>
-                                <li ><a href="/">Add photo</a></li>
                                 <li><a  href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

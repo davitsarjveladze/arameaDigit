@@ -17,10 +17,10 @@
                                 <div class="card-event h-100">
                                     <div class="card-event-top">
                                         <div class="card-event-img">
-                                            <img src="https://via.placeholder.com/350x350" class="no_logo" width="1042" height="1042" alt="">
+                                            <img src="{{asset($post->img_url)}}" class="no_logo" width="1042" height="1042" alt="">
                                         </div>
                                         <div class="card-event-keyword">
-                                            <a href="Visioconferences" class="card-event-keyword-link">
+                                            <a href="/posts/show/{{$post->id}}" class="card-event-keyword-link">
                                                 <span>{{ $post->name }}</span>
                                             </a>
                                         </div>
@@ -30,7 +30,7 @@
                                            {{$post->created_at}}
                                         </div>
                                         <div class="card-event-titre">
-                                            <a href="Napoleon-Ier-dans-les-arts">{{ $post->title }}</a>
+                                            <a href="/posts/show/{{$post->id}}">{{ $post->title }}</a>
                                         </div>
                                     </div>
                                 </div>

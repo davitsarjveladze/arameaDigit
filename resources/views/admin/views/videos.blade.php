@@ -128,7 +128,7 @@
                                 <input type="text" name="category" class="form-control" required/>
                             </div>
                             <div class="form-group">
-                                <label for="galleryName" class="label">gallery Name: </label>
+                                <label for="galleryName" class="label">gallery id: </label>
                                 <input type="text" name="galleryName" class="form-control" required/>
                             </div>
                             <div class="form-group">

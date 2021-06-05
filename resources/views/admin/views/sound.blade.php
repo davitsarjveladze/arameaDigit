@@ -10,10 +10,10 @@
                     <div class="card-header border-0">
                         <div class="row align-items-center">
                             <div class="col-8">
-                                <h3 class="mb-0">Galleries</h3>
+                                <h3 class="mb-0">Sounds</h3>
                             </div>
                             <div class="col-4 text-right">
-                                <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Add Gallery</button>
+                                <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Add album</button>
                             </div>
                         </div>
                     </div>
@@ -24,61 +24,61 @@
                     <div class="table-responsive">
                         <table class="table align-items-center">
                             <thead class="thead-light">
-                       <tr>
-                                     <th scope="col">Name</th>
-{{--                                <th scope="col">Images count</th>--}}
+                            <tr>
+                                <th scope="col">Name</th>
+                                {{--                                <th scope="col">Images count</th>--}}
                                 <th scope="col">status</th>
-                                <th scope="col">Gallery Img</th>
+                                <th scope="col">album Img</th>
                                 <th scope="col">Action</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($Gallery as $gall)
-                            <tr>
-                                <th scope="row">
-                                    <div class="media align-items-center">
-                                        <div class="media-body">
-                                            <span class="mb-0 text-sm">{{$gall->tittle}}</span>
+                            @foreach($sounds as $gall)
+                                <tr>
+                                    <th scope="row">
+                                        <div class="media align-items-center">
+                                            <div class="media-body">
+                                                <span class="mb-0 text-sm">{{$gall->tittle}}</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </th>
-{{--                                <td>--}}
-{{--                                    {{$gall->count}}--}}
-{{--                                </td>--}}
-                                <td>
-                                    @if($gall->status == 1)
-                                        <button type="button" class="btn btn-sm btn-success">published</button>
-                                    @elseif($gall->status == 0)
-                                        <button type="button" class="btn btn-sm btn-warning">pending</button>
-                                    @else
-                                        <button type="button" class="btn btn-sm btn-danger">rejected</button>
-                                    @endif
-                                </td>
-                                <td>
-                                    <div class="avatar-group">
-                                        <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Ryan Tompson">
-                                            <img alt="Image placeholder"
-                                                 src="{{asset($gall->img_url)}}"
-                                                 class="rounded-circle">
-                                        </a>
-                                    </div>
-
-                                </td>
-                                <td class="">
-                                    <div class="dropdown">
-                                        <a class="btn btn-sm btn-icon-only " href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-
-                                           <a class="dropdown-item" href="/adm/gallerydetail/{{$gall->id}}" >Show</a>
-                                            <a class="dropdown-item" href="/adm/gallery/delete/{{$gall->id}}" >Delete</a>
-
+                                    </th>
+                                    {{--                                <td>--}}
+                                    {{--                                    {{$gall->count}}--}}
+                                    {{--                                </td>--}}
+                                    <td>
+                                        @if($gall->status == 1)
+                                            <button type="button" class="btn btn-sm btn-success">published</button>
+                                        @elseif($gall->status == 0)
+                                            <button type="button" class="btn btn-sm btn-warning">pending</button>
+                                        @else
+                                            <button type="button" class="btn btn-sm btn-danger">rejected</button>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        <div class="avatar-group">
+                                            <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Ryan Tompson">
+                                                <img alt="Image placeholder"
+                                                     src="{{asset($gall->img_url)}}"
+                                                     class="rounded-circle">
+                                            </a>
                                         </div>
 
-                                    </div>
-                                </td>
-                            </tr>
+                                    </td>
+                                    <td class="">
+                                        <div class="dropdown">
+                                            <a class="btn btn-sm btn-icon-only " href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+
+                                                <a class="dropdown-item" href="/adm/gallerydetail/{{$gall->id}}" >Show</a>
+                                                <a class="dropdown-item" href="/adm/gallery/delete/{{$gall->id}}" >Delete</a>
+
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                </tr>
                             @endforeach
                             </tbody>
                         </table>
@@ -86,7 +86,7 @@
                     </div>
                     <div class="card-footer py-4">
                         <nav class="d-flex justify-content-center" aria-label="...">
-                            {{$Gallery}}
+{{--                            {!! $sounds !!}--}}
                         </nav>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Add post</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Add sound</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -119,9 +119,6 @@
                                 <label class="label"> {{__('Post Image')}}</label>
                                 <input type="file" name="image" class="form-control">
                             </div>
-                            {{--                            <div class="form-group">--}}
-                            {{--                                <input type="submit" class="btn btn-success" >--}}
-                            {{--                            </div>--}}
                             <div class="form-group">
                                 <label for="NON">{{__('For now')}}</label>
                                 <input type="checkbox" name="NON" id="NON">

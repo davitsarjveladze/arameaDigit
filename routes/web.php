@@ -88,6 +88,11 @@ Route::prefix('adm')->group(function () {
 
     Route::get('/home', [FirstPageController2::class, 'getIndex'])->name('adm.home')->middleware('admin');
     Route::get('/profile/edit', [FirstPageController2::class, 'getProfile'])->name('profile.edit')->middleware('admin');
+
+    Route::get('/sounds_albums', [SoundController::class, 'getAdminIndex'])->middleware('admin');
+    Route::POST('/sounds_albums/store', [SoundController::class, 'StoreSound'])->name('adm.sounds_albums.store')->middleware('admin');
+
+    Route::get('/profile/edit/{id}', [FirstPageController2::class, 'getProfile'])->name('profile.edit2')->middleware('admin');
     Route::get('/profile/password', [FirstPageController2::class, 'getProfile'])->name('profile.password')->middleware('admin');
     Route::get('/profile/update', [FirstPageController2::class, 'getProfile'])->name('profile.update')->middleware('admin');
 
@@ -116,6 +121,9 @@ Route::prefix('adm')->group(function () {
 
     Route::get('/carousel', [CarouselController::class,'GetView'])->name('adm.Carousel')->middleware('admin');
     Route::Post('/carousel/store', [CarouselController::class, 'StoreSlide'])->name('adm.carouse.store')->middleware('admin');
+    Route::get('/gallery/delete/{id}', [AlbumsController::class,'deleteGallery']);
+    Route::get('/advertise', [ AdvertiseController::class , 'getAdminAddIndex'])->name('AdminAddView');
+
 });
 //Route::get('/albums', 'HomeController@index')->name('home');
 //Route::get('/photo/{id}', 'HomeController@index')->name('home');

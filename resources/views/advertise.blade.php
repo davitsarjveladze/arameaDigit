@@ -16,7 +16,7 @@
             <div class="alert alert-primary mb-2" role="alert">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam deleniti dolore doloribus est et eum incidunt, iusto magni molestiae natus, nisi quae
             </div>
-            asddddddddddddddddddddddddddd
+            there will be text with prices
         </div>
     </div>
     <script>

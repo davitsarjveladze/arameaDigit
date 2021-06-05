@@ -76,10 +76,7 @@
                                 <input type="text" name="title" class="form-control" required/>
                             </div>
                             <input type="hidden" value="{{Request::segment(3)}}" name="gallery_id">
-                            <div class="form-group">
-                                <label for="category" class="label">Gallery category: </label>
-                                <input type="text" name="category" class="form-control" required/>
-                            </div>
+
                             <div class="form-group">
                                 <label class="label"> {{__('Post Image')}}</label>
                                 <input type="file" name="image" class="form-control">
@@ -87,10 +84,6 @@
                             {{--                            <div class="form-group">--}}
                             {{--                                <input type="submit" class="btn btn-success" >--}}
                             {{--                            </div>--}}
-                            <div class="form-group">
-                                <label for="NON">{{__('For now')}}</label>
-                                <input type="checkbox" name="NON" id="NON">
-                            </div>
                             <div class="form-group">
                                 <input type="submit" class="btn btn-success" >
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
